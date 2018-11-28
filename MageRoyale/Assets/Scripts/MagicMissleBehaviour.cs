@@ -18,7 +18,7 @@ public class MagicMissleBehaviour : MonoBehaviour {
         Debug.Log(e.Hit.transform.name); //will print collided object name to the console.
         if(e.Hit.transform.tag == "Player")
         {
-            e.Hit.transform.GetComponent<PlayerController>().TakeDamage(damage);
+            e.Hit.transform.GetComponent<PlayerControler>().TakeDamage(damage);
         }
 
         Destroy(this.gameObject);
