@@ -45,11 +45,14 @@ public class PlayerController : NetworkBehaviour {
             cam.enabled = true;
             if (Input.GetKeyDown(KeyCode.LeftShift))
             {
-                speed *= 2.0f;
+                speed = 6.0f;
+                transform.Translate(new Vector3(0.0f,0.0f,speed * Time.deltaTime));
+                anim.SetBool("Running", true);
             } 
             if (Input.GetKeyUp(KeyCode.LeftShift))
             {
-                speed /= 2.0f;
+                speed = 3.0f;
+                anim.SetBool("Running", false);
             }
 
             if (Input.GetKey(KeyCode.W))
