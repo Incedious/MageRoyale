@@ -20,6 +20,7 @@ public class Radar : MonoBehaviour
 	// images to display as blips
 	// one for each type of item to display in the radar
 	public GameObject rawImageBlipCube;
+	public GameObject PlayerPOsitionImage;
 	public GameObject rawImageBlipSphere;
 
 	// image we'll show behind the blips
@@ -67,6 +68,7 @@ public class Radar : MonoBehaviour
 		// then again for objects tagged Sphere, to be represented on the radar with prefab rawImageBlipSphere.
 		FindAndDisplayBlipsForTag("Cube", rawImageBlipCube);
 		FindAndDisplayBlipsForTag("Sphere", rawImageBlipSphere);
+		FindAndDisplayBlipsForTag("Player",PlayerPOsitionImage);
 	}
 
 
